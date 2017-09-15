@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E75B3BC42CEEBA2E1AF90F7 /* Pods_PartyDrinkTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */; };
 		BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8A971F6B91310065CEAD /* AppDelegate.swift */; };
-		BF2B8A9A1F6B91310065CEAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8A991F6B91310065CEAD /* ViewController.swift */; };
-		BF2B8A9D1F6B91310065CEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8A9B1F6B91310065CEAD /* Main.storyboard */; };
 		BF2B8A9F1F6B91310065CEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */; };
-		BF2B8AA21F6B91310065CEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AA01F6B91310065CEAD /* LaunchScreen.storyboard */; };
+		BF2B8AB01F6B9C9F0065CEAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8AAF1F6B9C9F0065CEAD /* ViewController.swift */; };
+		BF2B8AB31F6B9CC00065CEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB11F6B9CC00065CEAD /* LaunchScreen.storyboard */; };
+		BF2B8AB41F6B9CC00065CEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB21F6B9CC00065CEAD /* Main.storyboard */; };
+		BF2B8AB71F6B9CCD0065CEAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB51F6B9CCD0065CEAD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyDrinkTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		806E2D5AA03C1EE8000A91F5 /* Pods-PartyDrinkTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyDrinkTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime.release.xcconfig"; sourceTree = "<group>"; };
 		BF2B8A941F6B91310065CEAD /* PartyDrinkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyDrinkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2B8A971F6B91310065CEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF2B8A991F6B91310065CEAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF2B8A9C1F6B91310065CEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF2B8AA11F6B91310065CEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BF2B8AA31F6B91310065CEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF2B8AAF1F6B9C9F0065CEAD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		BF2B8AB11F6B9CC00065CEAD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF2B8AB21F6B9CC00065CEAD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		BF2B8AB51F6B9CCD0065CEAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF2B8AB61F6B9CCD0065CEAD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
+		D59EA5CB00F373D5C8D02B7B /* Pods-PartyDrinkTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyDrinkTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E75B3BC42CEEBA2E1AF90F7 /* Pods_PartyDrinkTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				BF2B8A961F6B91310065CEAD /* PartyDrinkTime */,
 				BF2B8A951F6B91310065CEAD /* Products */,
+				FDE1E548CCBE9CED092CD3A4 /* Pods */,
+				E32167A39CB6370160707577 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +64,55 @@
 			isa = PBXGroup;
 			children = (
 				BF2B8A971F6B91310065CEAD /* AppDelegate.swift */,
-				BF2B8A991F6B91310065CEAD /* ViewController.swift */,
-				BF2B8A9B1F6B91310065CEAD /* Main.storyboard */,
+				BF2B8AB91F6B9E840065CEAD /* View Controllers */,
+				BF2B8ABA1F6B9EA60065CEAD /* Storyboards */,
 				BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */,
-				BF2B8AA01F6B91310065CEAD /* LaunchScreen.storyboard */,
-				BF2B8AA31F6B91310065CEAD /* Info.plist */,
+				BF2B8ABB1F6B9EC20065CEAD /* Supporting Files */,
 			);
 			path = PartyDrinkTime;
+			sourceTree = "<group>";
+		};
+		BF2B8AB91F6B9E840065CEAD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B8AAF1F6B9C9F0065CEAD /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BF2B8ABA1F6B9EA60065CEAD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B8AB21F6B9CC00065CEAD /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BF2B8ABB1F6B9EC20065CEAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B8AB11F6B9CC00065CEAD /* LaunchScreen.storyboard */,
+				BF2B8AB61F6B9CCD0065CEAD /* Info.plist */,
+				BF2B8AB51F6B9CCD0065CEAD /* GoogleService-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E32167A39CB6370160707577 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDE1E548CCBE9CED092CD3A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D59EA5CB00F373D5C8D02B7B /* Pods-PartyDrinkTime.debug.xcconfig */,
+				806E2D5AA03C1EE8000A91F5 /* Pods-PartyDrinkTime.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF2B8AA61F6B91310065CEAD /* Build configuration list for PBXNativeTarget "PartyDrinkTime" */;
 			buildPhases = (
+				25461E3B8896A99907DE7982 /* [CP] Check Pods Manifest.lock */,
 				BF2B8A901F6B91310065CEAD /* Sources */,
 				BF2B8A911F6B91310065CEAD /* Frameworks */,
 				BF2B8A921F6B91310065CEAD /* Resources */,
+				D877EAFF2F4BE408AA44E7F3 /* [CP] Embed Pods Frameworks */,
+				0756122F233F0210F7A2E9CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,44 +178,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2B8AA21F6B91310065CEAD /* LaunchScreen.storyboard in Resources */,
+				BF2B8AB41F6B9CC00065CEAD /* Main.storyboard in Resources */,
+				BF2B8AB71F6B9CCD0065CEAD /* GoogleService-Info.plist in Resources */,
 				BF2B8A9F1F6B91310065CEAD /* Assets.xcassets in Resources */,
-				BF2B8A9D1F6B91310065CEAD /* Main.storyboard in Resources */,
+				BF2B8AB31F6B9CC00065CEAD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0756122F233F0210F7A2E9CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25461E3B8896A99907DE7982 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D877EAFF2F4BE408AA44E7F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF2B8A901F6B91310065CEAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2B8A9A1F6B91310065CEAD /* ViewController.swift in Sources */,
+				BF2B8AB01F6B9C9F0065CEAD /* ViewController.swift in Sources */,
 				BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BF2B8A9B1F6B91310065CEAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF2B8A9C1F6B91310065CEAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BF2B8AA01F6B91310065CEAD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF2B8AA11F6B91310065CEAD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BF2B8AA41F6B91310065CEAD /* Debug */ = {
@@ -261,27 +345,31 @@
 		};
 		BF2B8AA71F6B91310065CEAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59EA5CB00F373D5C8D02B7B /* Pods-PartyDrinkTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CGUE68EN3T;
-				INFOPLIST_FILE = PartyDrinkTime/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PartyDrinkTime/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.momose-kaichi.PartyDrinkTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BF2B8AA81F6B91310065CEAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 806E2D5AA03C1EE8000A91F5 /* Pods-PartyDrinkTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CGUE68EN3T;
-				INFOPLIST_FILE = PartyDrinkTime/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PartyDrinkTime/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.momose-kaichi.PartyDrinkTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -304,6 +392,7 @@
 				BF2B8AA81F6B91310065CEAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

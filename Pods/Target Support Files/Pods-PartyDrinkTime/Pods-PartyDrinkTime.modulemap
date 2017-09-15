@@ -1,0 +1,6 @@
+framework module Pods_PartyDrinkTime {
+  umbrella header "Pods-PartyDrinkTime-umbrella.h"
+
+  export *
+  module * { export * }
+}
