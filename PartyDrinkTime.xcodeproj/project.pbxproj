@@ -16,6 +16,9 @@
 		BF2B8AB71F6B9CCD0065CEAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB51F6B9CCD0065CEAD /* GoogleService-Info.plist */; };
 		BF2B8ABD1F6BAAC70065CEAD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8ABC1F6BAAC70065CEAD /* Login.storyboard */; };
 		BF2B8ABF1F6BAB2C0065CEAD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8ABE1F6BAB2C0065CEAD /* LoginViewController.swift */; };
+		BF45E4981F71E33D000D0BC0 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45E4971F71E33D000D0BC0 /* CreateUsernameViewController.swift */; };
+		BF45E49A1F71E7E2000D0BC0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45E4991F71E7E2000D0BC0 /* UserService.swift */; };
+		BFC9D2291F71AAB300F32781 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9D2281F71AAB300F32781 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		BF2B8AB61F6B9CCD0065CEAD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		BF2B8ABC1F6BAAC70065CEAD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		BF2B8ABE1F6BAB2C0065CEAD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		BF45E4971F71E33D000D0BC0 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		BF45E4991F71E7E2000D0BC0 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Services/UserService.swift; sourceTree = "<group>"; };
+		BFC9D2281F71AAB300F32781 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		D59EA5CB00F373D5C8D02B7B /* Pods-PartyDrinkTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyDrinkTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,8 @@
 				BF2B8ABA1F6B9EA60065CEAD /* Storyboards */,
 				BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */,
 				BF2B8ABB1F6B9EC20065CEAD /* Supporting Files */,
+				BFC9D22A1F71AABC00F32781 /* Models */,
+				BF45E49B1F71E7E8000D0BC0 /* Services */,
 			);
 			path = PartyDrinkTime;
 			sourceTree = "<group>";
@@ -81,6 +89,7 @@
 			children = (
 				BF2B8AAF1F6B9C9F0065CEAD /* ViewController.swift */,
 				BF2B8ABE1F6BAB2C0065CEAD /* LoginViewController.swift */,
+				BF45E4971F71E33D000D0BC0 /* CreateUsernameViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -102,6 +111,22 @@
 				BF2B8AB51F6B9CCD0065CEAD /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF45E49B1F71E7E8000D0BC0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF45E4991F71E7E2000D0BC0 /* UserService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		BFC9D22A1F71AABC00F32781 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFC9D2281F71AAB300F32781 /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E32167A39CB6370160707577 /* Frameworks */ = {
@@ -247,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC9D2291F71AAB300F32781 /* User.swift in Sources */,
 				BF2B8ABF1F6BAB2C0065CEAD /* LoginViewController.swift in Sources */,
+				BF45E49A1F71E7E2000D0BC0 /* UserService.swift in Sources */,
 				BF2B8AB01F6B9C9F0065CEAD /* ViewController.swift in Sources */,
+				BF45E4981F71E33D000D0BC0 /* CreateUsernameViewController.swift in Sources */,
 				BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
