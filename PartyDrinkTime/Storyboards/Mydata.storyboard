@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xfy-lu-vPv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Party Data-->
+        <scene sceneID="DlO-kn-MZ1">
+            <objects>
+                <viewController id="8J7-jy-OcK" customClass="MydataViewController" customModule="PartyDrinkTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mr7-g6-8bO"/>
+                        <viewControllerLayoutGuide type="bottom" id="hB3-Nn-czJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QMy-Xi-5X8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VbI-Yy-HnO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TZH-Du-AFQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="120"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GVM-0i-vYk">
+                                        <rect key="frame" x="0.0" y="120" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ccc-df-IJS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VbI-Yy-HnO" firstAttribute="leading" secondItem="QMy-Xi-5X8" secondAttribute="leadingMargin" constant="-16" id="3qs-D6-pZA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VbI-Yy-HnO" secondAttribute="trailing" constant="-16" id="BR5-Qn-833"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="VbI-Yy-HnO" secondAttribute="bottom" id="SKo-iZ-vQx"/>
+                            <constraint firstItem="VbI-Yy-HnO" firstAttribute="top" secondItem="QMy-Xi-5X8" secondAttribute="topMargin" id="eeY-FP-1xK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Party Data" id="W4Y-kR-DPv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWy-DZ-BDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="-271.21439280359823"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="ssI-Ac-rKe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xfy-lu-vPv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="hFE-xw-LAa"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NTu-od-g6X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8J7-jy-OcK" kind="relationship" relationship="rootViewController" id="JUQ-id-Zoy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXO-4T-aYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480.80000000000001" y="-271.21439280359823"/>
+        </scene>
+    </scenes>
+</document>

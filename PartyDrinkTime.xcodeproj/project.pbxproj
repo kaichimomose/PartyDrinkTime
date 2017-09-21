@@ -10,7 +10,6 @@
 		5E75B3BC42CEEBA2E1AF90F7 /* Pods_PartyDrinkTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */; };
 		BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8A971F6B91310065CEAD /* AppDelegate.swift */; };
 		BF2B8A9F1F6B91310065CEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */; };
-		BF2B8AB01F6B9C9F0065CEAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8AAF1F6B9C9F0065CEAD /* ViewController.swift */; };
 		BF2B8AB31F6B9CC00065CEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB11F6B9CC00065CEAD /* LaunchScreen.storyboard */; };
 		BF2B8AB41F6B9CC00065CEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB21F6B9CC00065CEAD /* Main.storyboard */; };
 		BF2B8AB71F6B9CCD0065CEAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB51F6B9CCD0065CEAD /* GoogleService-Info.plist */; };
@@ -21,6 +20,9 @@
 		BFC9D2291F71AAB300F32781 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9D2281F71AAB300F32781 /* User.swift */; };
 		BFCAB49D1F721F9E00B27919 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB49C1F721F9E00B27919 /* Constants.swift */; };
 		BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB4A11F723B0800B27919 /* Storyboard+Utility.swift */; };
+		BFCAB4A61F72B0BF00B27919 /* MydataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB4A51F72B0BF00B27919 /* MydataViewController.swift */; };
+		BFCAB4A81F72F09200B27919 /* Mydata.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCAB4A71F72F09200B27919 /* Mydata.storyboard */; };
+		BFCAB4AA1F72FCD300B27919 /* PartyListTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB4A91F72FCD300B27919 /* PartyListTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,6 @@
 		BF2B8A941F6B91310065CEAD /* PartyDrinkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyDrinkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2B8A971F6B91310065CEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF2B8AAF1F6B9C9F0065CEAD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		BF2B8AB11F6B9CC00065CEAD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2B8AB21F6B9CC00065CEAD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		BF2B8AB51F6B9CCD0065CEAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -41,6 +42,9 @@
 		BFC9D2281F71AAB300F32781 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		BFCAB49C1F721F9E00B27919 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		BFCAB4A11F723B0800B27919 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		BFCAB4A51F72B0BF00B27919 /* MydataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MydataViewController.swift; path = Controllers/MydataViewController.swift; sourceTree = "<group>"; };
+		BFCAB4A71F72F09200B27919 /* Mydata.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mydata.storyboard; path = Storyboards/Mydata.storyboard; sourceTree = "<group>"; };
+		BFCAB4A91F72FCD300B27919 /* PartyListTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartyListTab.swift; path = Views/PartyListTab.swift; sourceTree = "<group>"; };
 		D59EA5CB00F373D5C8D02B7B /* Pods-PartyDrinkTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyDrinkTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,7 @@
 				BFC9D22A1F71AABC00F32781 /* Models */,
 				BF45E49B1F71E7E8000D0BC0 /* Services */,
 				BFCAB4A01F72204700B27919 /* Extentions */,
+				BFCAB4AB1F72FCDA00B27919 /* Views */,
 			);
 			path = PartyDrinkTime;
 			sourceTree = "<group>";
@@ -92,9 +97,9 @@
 		BF2B8AB91F6B9E840065CEAD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF2B8AAF1F6B9C9F0065CEAD /* ViewController.swift */,
 				BF2B8ABE1F6BAB2C0065CEAD /* LoginViewController.swift */,
 				BF45E4971F71E33D000D0BC0 /* CreateUsernameViewController.swift */,
+				BFCAB4A51F72B0BF00B27919 /* MydataViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2B8AB21F6B9CC00065CEAD /* Main.storyboard */,
+				BFCAB4A71F72F09200B27919 /* Mydata.storyboard */,
 				BF2B8ABC1F6BAAC70065CEAD /* Login.storyboard */,
 			);
 			name = Storyboards;
@@ -141,6 +147,14 @@
 				BFCAB4A11F723B0800B27919 /* Storyboard+Utility.swift */,
 			);
 			name = Extentions;
+			sourceTree = "<group>";
+		};
+		BFCAB4AB1F72FCDA00B27919 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB4A91F72FCD300B27919 /* PartyListTab.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E32167A39CB6370160707577 /* Frameworks */ = {
@@ -225,6 +239,7 @@
 			files = (
 				BF2B8AB41F6B9CC00065CEAD /* Main.storyboard in Resources */,
 				BF2B8AB71F6B9CCD0065CEAD /* GoogleService-Info.plist in Resources */,
+				BFCAB4A81F72F09200B27919 /* Mydata.storyboard in Resources */,
 				BF2B8A9F1F6B91310065CEAD /* Assets.xcassets in Resources */,
 				BF2B8ABD1F6BAAC70065CEAD /* Login.storyboard in Resources */,
 				BF2B8AB31F6B9CC00065CEAD /* LaunchScreen.storyboard in Resources */,
@@ -290,7 +305,8 @@
 				BF2B8ABF1F6BAB2C0065CEAD /* LoginViewController.swift in Sources */,
 				BF45E49A1F71E7E2000D0BC0 /* UserService.swift in Sources */,
 				BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */,
-				BF2B8AB01F6B9C9F0065CEAD /* ViewController.swift in Sources */,
+				BFCAB4A61F72B0BF00B27919 /* MydataViewController.swift in Sources */,
+				BFCAB4AA1F72FCD300B27919 /* PartyListTab.swift in Sources */,
 				BFCAB49D1F721F9E00B27919 /* Constants.swift in Sources */,
 				BF45E4981F71E33D000D0BC0 /* CreateUsernameViewController.swift in Sources */,
 				BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */,
