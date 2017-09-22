@@ -17,6 +17,8 @@
 		BF2B8ABF1F6BAB2C0065CEAD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8ABE1F6BAB2C0065CEAD /* LoginViewController.swift */; };
 		BF45E4981F71E33D000D0BC0 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45E4971F71E33D000D0BC0 /* CreateUsernameViewController.swift */; };
 		BF45E49A1F71E7E2000D0BC0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45E4991F71E7E2000D0BC0 /* UserService.swift */; };
+		BFB665531F744FB200AD4F01 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB665521F744FB200AD4F01 /* PostImageCell.swift */; };
+		BFB665551F745ED400AD4F01 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB665541F745ED400AD4F01 /* ProfileHeaderView.swift */; };
 		BFC9D2291F71AAB300F32781 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9D2281F71AAB300F32781 /* User.swift */; };
 		BFCAB49D1F721F9E00B27919 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB49C1F721F9E00B27919 /* Constants.swift */; };
 		BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB4A11F723B0800B27919 /* Storyboard+Utility.swift */; };
@@ -39,6 +41,8 @@
 		BF2B8ABE1F6BAB2C0065CEAD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		BF45E4971F71E33D000D0BC0 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		BF45E4991F71E7E2000D0BC0 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Services/UserService.swift; sourceTree = "<group>"; };
+		BFB665521F744FB200AD4F01 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = Views/PostImageCell.swift; sourceTree = "<group>"; };
+		BFB665541F745ED400AD4F01 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		BFC9D2281F71AAB300F32781 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		BFCAB49C1F721F9E00B27919 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		BFCAB4A11F723B0800B27919 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				BFCAB4A91F72FCD300B27919 /* PartyListTab.swift */,
+				BFB665521F744FB200AD4F01 /* PostImageCell.swift */,
+				BFB665541F745ED400AD4F01 /* ProfileHeaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -204,12 +210,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Kaichi Momose";
 				TargetAttributes = {
 					BF2B8A931F6B91310065CEAD = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = CGUE68EN3T;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -303,7 +310,9 @@
 			files = (
 				BFC9D2291F71AAB300F32781 /* User.swift in Sources */,
 				BF2B8ABF1F6BAB2C0065CEAD /* LoginViewController.swift in Sources */,
+				BFB665551F745ED400AD4F01 /* ProfileHeaderView.swift in Sources */,
 				BF45E49A1F71E7E2000D0BC0 /* UserService.swift in Sources */,
+				BFB665531F744FB200AD4F01 /* PostImageCell.swift in Sources */,
 				BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */,
 				BFCAB4A61F72B0BF00B27919 /* MydataViewController.swift in Sources */,
 				BFCAB4AA1F72FCD300B27919 /* PartyListTab.swift in Sources */,
@@ -326,7 +335,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -334,7 +345,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -377,7 +392,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -385,7 +402,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -421,7 +442,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.momose-kaichi.PartyDrinkTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -436,7 +458,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.momose-kaichi.PartyDrinkTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
