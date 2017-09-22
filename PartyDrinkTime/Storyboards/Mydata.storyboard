@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,40 +21,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VbI-Yy-HnO">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uag-Bj-gVV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TZH-Du-AFQ">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xmc-2N-4T6">
                                     <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="50" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GVM-0i-vYk">
-                                        <rect key="frame" x="0.0" y="120" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PartyImageCell" id="SfE-kg-v3u" customClass="PartyImageCell" customModule="PartyDrinkTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ScI-Gc-iow">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="ScI-Gc-iow" firstAttribute="leading" secondItem="SfE-kg-v3u" secondAttribute="leading" id="4n1-hI-Jjy"/>
+                                            <constraint firstAttribute="bottom" secondItem="ScI-Gc-iow" secondAttribute="bottom" id="9bN-pf-3dX"/>
+                                            <constraint firstAttribute="trailing" secondItem="ScI-Gc-iow" secondAttribute="trailing" id="ecb-es-Y5B"/>
+                                            <constraint firstItem="ScI-Gc-iow" firstAttribute="top" secondItem="SfE-kg-v3u" secondAttribute="top" id="xvs-BG-v3X"/>
+                                        </constraints>
+                                        <size key="customSize" width="125" height="125"/>
+                                        <connections>
+                                            <outlet property="partyImageView" destination="ScI-Gc-iow" id="vNd-0J-1Hq"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ccc-df-IJS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="8J7-jy-OcK" id="2G0-SD-nxx"/>
+                                    <outlet property="delegate" destination="8J7-jy-OcK" id="kNx-yL-gId"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VbI-Yy-HnO" firstAttribute="leading" secondItem="QMy-Xi-5X8" secondAttribute="leadingMargin" constant="-16" id="3qs-D6-pZA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VbI-Yy-HnO" secondAttribute="trailing" constant="-16" id="BR5-Qn-833"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="VbI-Yy-HnO" secondAttribute="bottom" id="SKo-iZ-vQx"/>
-                            <constraint firstItem="VbI-Yy-HnO" firstAttribute="top" secondItem="QMy-Xi-5X8" secondAttribute="topMargin" id="eeY-FP-1xK"/>
+                            <constraint firstItem="Uag-Bj-gVV" firstAttribute="top" secondItem="QMy-Xi-5X8" secondAttribute="top" id="Mwk-9V-9Rs"/>
+                            <constraint firstAttribute="trailing" secondItem="Uag-Bj-gVV" secondAttribute="trailing" id="NI4-KV-UJF"/>
+                            <constraint firstItem="Uag-Bj-gVV" firstAttribute="leading" secondItem="QMy-Xi-5X8" secondAttribute="leading" id="Ruc-EJ-xN4"/>
+                            <constraint firstAttribute="bottom" secondItem="Uag-Bj-gVV" secondAttribute="bottom" id="sVS-jW-nQw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Party Data" id="W4Y-kR-DPv"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Uag-Bj-gVV" id="JX8-Y4-PNR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWy-DZ-BDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="iby-xs-JrL"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Item 2" id="iby-xs-JrL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80z-dK-1Uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="482" y="384"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="iih-3r-qJ7">
             <objects>
-                <tabBarController id="chz-fv-N9f" sceneMemberID="viewController">
+                <tabBarController id="chz-fv-N9f" customClass="MainTabBarController" customModule="PartyDrinkTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="HM3-CR-og5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
