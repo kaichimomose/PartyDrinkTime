@@ -13,5 +13,7 @@ target 'PartyDrinkTime' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FirebaseUI/Facebook'
+  pod "GBHFacebookImagePicker"
+  pod 'Kingfisher', '~> 4.0'
 
 end

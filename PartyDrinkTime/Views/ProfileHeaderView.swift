@@ -29,6 +29,10 @@ class ProfileHeaderView: UICollectionReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        profileImageView.layer.cornerRadius = 6
+        profileImageView.layer.borderColor = UIColor.lightGray.cgColor
+        profileImageView.layer.borderWidth = 1
+
         profileButton.layer.cornerRadius = 6
         profileButton.layer.borderColor = UIColor.lightGray.cgColor
         profileButton.layer.borderWidth = 1
@@ -45,6 +49,16 @@ class ProfileHeaderView: UICollectionReusableView {
     }
     
     @IBAction func settingButtonTapped(_ sender: UIButton) {
-        delegate?.didTapSettingButton(sender, on: self)    }
+        delegate?.didTapSettingButton(sender, on: self)
+    }
+    
+//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let identifier = segue.identifier {
+//            if identifier == "displayProfile" {
+//                print("Transitioning to the Display Profile View Controller")
+//            }
+//        }
+//    }
+
 
 }

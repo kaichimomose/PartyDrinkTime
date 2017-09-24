@@ -39,6 +39,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GBHFacebookImagePicker-GBHFacebookImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GBHFacebookImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -49,7 +59,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PartyDrinkTime.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>leveldb-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,7 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>215A560BF50ADC924403A27600F1191E</key>
+		<key>266AE1506DAD13D34C0725E909C0C476</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +112,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6AC72FB826B46DF126B0D94D6DBF8C5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6F712943B3C5592E82604940D11CE08A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7335E9C9689F3B8A16F063A884748533</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A276D13F6BD0D73D4086B7603150E1C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -103,6 +138,11 @@
 			<true/>
 		</dict>
 		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF1688C81E13D5F64C3DDD87F01B1A56</key>
 		<dict>
 			<key>primary</key>
 			<true/>

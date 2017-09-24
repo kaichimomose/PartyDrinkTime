@@ -57,10 +57,10 @@ extension MydataViewController: UICollectionViewDataSource {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         
         headerView.delegate = self
-        headerView.nameLabel.text = "Kaichi Momose"
+        headerView.nameLabel.text = User.current.username
         headerView.partyCountLabel.text = "30"
         headerView.buddyCountLabel.text = "40"
-        headerView.profileImageView.backgroundColor = .red
+        //headerView.profileImageView.backgroundColor = .red
         
         return headerView
     }
