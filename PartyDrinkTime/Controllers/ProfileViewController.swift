@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import Kingfisher
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController{
     @IBOutlet weak var profNameTextField: UITextField!
@@ -21,31 +22,74 @@ class ProfileViewController: UIViewController{
     
     var user: User!
     
+    var profileHandle: DatabaseHandle = 0
+    var profileRef: DatabaseReference?
+    
+    var authHandle: AuthStateDidChangeListenerHandle?
+    
     let photoHelper = MGPhotoHelper()
     var profileImage = [ProfileImage]()
     
     let refreshControl = UIRefreshControl()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
         
         user = user ?? User.current
-        
-        profUsernameTextField.text = user.username
         
         profImageView.layer.cornerRadius = 6
         profImageView.layer.borderColor = UIColor.lightGray.cgColor
         profImageView.layer.borderWidth = 1
-                
-//        configureView()
-        reloadProfile()
         
+        //        configureView()
+        reloadProfile()
     }
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        user = user ?? User.current
+//        
+//        profImageView.layer.cornerRadius = 6
+//        profImageView.layer.borderColor = UIColor.lightGray.cgColor
+//        profImageView.layer.borderWidth = 1
+//                
+////        configureView()
+//        reloadProfile()
+//    }
     
     func reloadProfile(){
         photoHelper.completionHandler = { image in
             ProfileImageService.create(for: image)
         }
+        
+        profileHandle = UserService.observeProfile(for: user) { [unowned self] (ref, user, profileImage) in
+            self.profileRef = ref
+            self.user = user
+            self.profileImage = profileImage
+            
+            DispatchQueue.main.async {
+                
+                if self.refreshControl.isRefreshing {
+                    self.refreshControl.endRefreshing()
+                }
+                
+                self.profileView.reloadInputViews()
+            }
+        }
+        
+        profileRef?.removeObserver(withHandle: profileHandle)
+        
+        let name = user.name ?? ""
+        profNameTextField.text = name
+        
+        profUsernameTextField.text = user.username
+        
+//        let imageURL = URL(string: self.profileImage[0].imageURL)
+//        self.profImageView.kf.setImage(with: imageURL)
+//        
+//        self.profileView.reloadInputViews()
         
         UserService.profileImage(for: User.current) { (profileImage) in
             self.profileImage = profileImage
@@ -60,6 +104,10 @@ class ProfileViewController: UIViewController{
             self.profileView.reloadInputViews()
         }
     }
+    
+//    deinit {
+//        profileRef?.removeObserver(withHandle: profileHandle)
+//    }
     
     func configureView() {
         // add pull to refresh

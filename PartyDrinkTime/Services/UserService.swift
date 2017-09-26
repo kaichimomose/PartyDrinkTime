@@ -25,8 +25,9 @@ struct UserService {
     
     static func create(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
         let userAttrs: [String : Any] = ["username": username,
-                                         "party_count": 0,
-                                         "buddy_count" : 0]
+                                         "name": "Kaichi Momose",
+                                         "party_count": 30,
+                                         "buddy_count" : 30]
         
         let ref = DatabaseReference.toLocation(.showUser(uid: firUser.uid))
         ref.setValue(userAttrs) { (error, ref) in
@@ -57,7 +58,7 @@ struct UserService {
     
     static func observeProfile(for user: User, completion: @escaping (DatabaseReference, User?, [ProfileImage]) -> Void) -> DatabaseHandle {
         // 1
-        let userRef = Database.database().reference().child("users").child(user.uid)
+        let userRef = DatabaseReference.toLocation(.showUser(uid: user.uid))
         
         // 2
         return userRef.observe(.value, with: { (snapshot) in
