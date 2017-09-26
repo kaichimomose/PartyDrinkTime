@@ -63,5 +63,19 @@ class ProfileViewController: UIViewController{
     @IBAction func editImageButtonTapped(_ sender: UIButton) {
         photoHelper.presentActionSheet(from: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "cancel" {
+                print("Cancel button tapped")
+            } else if identifier == "done" {
+                print("Done button tapped")
+                
+                // 1
+                let MydataViewController = segue.destination as! MydataViewController
+                // 2
+                MydataViewController.viewDidLoad()
+            }
+        }
+    }
 }

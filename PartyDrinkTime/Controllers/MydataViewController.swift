@@ -56,6 +56,13 @@ class MydataViewController: UIViewController {
     deinit {
         profileRef?.removeObserver(withHandle: profileHandle)
     }
+    
+    @IBAction func unwindToMydataViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
 }
     
 extension MydataViewController: UICollectionViewDataSource {

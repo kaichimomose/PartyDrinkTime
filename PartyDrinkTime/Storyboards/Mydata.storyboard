@@ -292,7 +292,18 @@
                             <constraint firstItem="P1K-Yv-K1T" firstAttribute="top" secondItem="ssw-ny-ZWZ" secondAttribute="bottom" constant="8" id="yqR-aB-Gzb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="19E-yn-rMd"/>
+                    <navigationItem key="navigationItem" title="Profile" id="19E-yn-rMd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="O4t-u1-kdw">
+                            <connections>
+                                <segue destination="Go3-dY-n0O" kind="unwind" identifier="cancel" unwindAction="unwindToMydataViewController:" id="QUQ-w1-rK5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="OGB-2T-6np">
+                            <connections>
+                                <segue destination="Go3-dY-n0O" kind="unwind" identifier="done" unwindAction="unwindToMydataViewController:" id="HjL-vT-Vki"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="editImageButton" destination="ssw-ny-ZWZ" id="Ef1-cv-Kmi"/>
                         <outlet property="profAgeLabel" destination="SRH-7k-g2i" id="Gpb-Rf-4Ks"/>
@@ -304,6 +315,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewh-jc-K9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Go3-dY-n0O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2180" y="-269.41529235382313"/>
         </scene>
