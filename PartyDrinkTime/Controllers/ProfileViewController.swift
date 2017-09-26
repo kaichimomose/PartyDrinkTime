@@ -12,12 +12,14 @@ import FirebaseAuth
 import Kingfisher
 
 class ProfileViewController: UIViewController{
-    @IBOutlet weak var profNameLabel: UILabel!
-    @IBOutlet weak var profUsernameLabel: UILabel!
-    @IBOutlet weak var profAgeLabel: UILabel!
+    @IBOutlet weak var profNameTextField: UITextField!
+    @IBOutlet weak var profUsernameTextField: UITextField!
+    @IBOutlet weak var profAgeTextField: UITextField!
     @IBOutlet weak var editImageButton: UIButton!
     @IBOutlet weak var profImageView: UIImageView!
     @IBOutlet var profileView: UIView!
+    
+    var user: User!
     
     let photoHelper = MGPhotoHelper()
     var profileImage = [ProfileImage]()
@@ -26,6 +28,10 @@ class ProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        user = user ?? User.current
+        
+        profUsernameTextField.text = user.username
         
         profImageView.layer.cornerRadius = 6
         profImageView.layer.borderColor = UIColor.lightGray.cgColor
@@ -60,6 +66,7 @@ class ProfileViewController: UIViewController{
         refreshControl.addTarget(self, action: #selector(reloadProfile), for: .valueChanged)
         profileView.addSubview(refreshControl)
     }
+    
     @IBAction func editImageButtonTapped(_ sender: UIButton) {
         photoHelper.presentActionSheet(from: self)
     }

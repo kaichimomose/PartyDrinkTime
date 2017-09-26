@@ -34,8 +34,10 @@ class MydataViewController: UIViewController {
         
         user = user ?? User.current
         
+        // add pull to refresh
         refreshControl.addTarget(self, action: #selector(self.collectionView.reloadData), for: .valueChanged)
         collectionView.addSubview(refreshControl)
+        //
         
         profileHandle = UserService.observeProfile(for: user) { [unowned self] (ref, user, profileImage) in
             self.profileRef = ref
