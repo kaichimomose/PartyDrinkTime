@@ -9,10 +9,21 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class MydataViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var user: User!
+    var profileImages = [ProfileImage]()
+    
+    var profileHandle: DatabaseHandle = 0
+    var profileRef: DatabaseReference?
+    
     var authHandle: AuthStateDidChangeListenerHandle?
+    
+    let refreshControl = UIRefreshControl()
     
     // MARK: - VC Lifecycle
     
@@ -21,19 +32,29 @@ class MydataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        authHandle = Auth.auth().addStateDidChangeListener() { [unowned self] (auth, user) in
-            guard user == nil else { return }
+        user = user ?? User.current
+        
+        refreshControl.addTarget(self, action: #selector(self.collectionView.reloadData), for: .valueChanged)
+        collectionView.addSubview(refreshControl)
+        
+        profileHandle = UserService.observeProfile(for: user) { [unowned self] (ref, user, profileImage) in
+            self.profileRef = ref
+            self.user = user
+            self.profileImages = profileImage
             
-            let loginViewController = UIStoryboard.initialViewController(for: .login)
-            self.view.window?.rootViewController = loginViewController
-            self.view.window?.makeKeyAndVisible()
+            DispatchQueue.main.async {
+                
+                if self.refreshControl.isRefreshing {
+                    self.refreshControl.endRefreshing()
+                }
+                
+                self.collectionView.reloadData()
+            }
         }
     }
     
     deinit {
-        if let authHandle = authHandle {
-            Auth.auth().removeStateDidChangeListener(authHandle)
-        }
+        profileRef?.removeObserver(withHandle: profileHandle)
     }
 }
     
@@ -56,10 +77,25 @@ extension MydataViewController: UICollectionViewDataSource {
         
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         
-        headerView.delegate = self
-        headerView.nameLabel.text = User.current.username
-        headerView.partyCountLabel.text = "30"
-        headerView.buddyCountLabel.text = "40"
+        let partyCount = user.partyCount ?? 0
+        headerView.partyCountLabel.text = "\(partyCount)"
+        
+        let buddyCount = user.buddyCount ?? 0
+        headerView.buddyCountLabel.text = "\(buddyCount)"
+        
+        headerView.nameLabel.text = user.username
+        
+//        let profileImage = self.profileImages[0]
+//        let imageURL = URL(string: profileImage.imageURL)
+//        headerView.profileImageView.kf.setImage(with: imageURL)
+        
+        UserService.profileImage(for: User.current) { (profileImage) in
+            self.profileImages = profileImage
+            let imageURL = URL(string: self.profileImages[0].imageURL)
+            headerView.profileImageView.kf.setImage(with: imageURL)
+        }
+
+        
         //headerView.profileImageView.backgroundColor = .red
         
         return headerView

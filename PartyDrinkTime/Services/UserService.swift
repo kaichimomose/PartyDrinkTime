@@ -24,7 +24,9 @@ struct UserService {
     }
     
     static func create(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
-        let userAttrs = ["username": username]
+        let userAttrs: [String : Any] = ["username": username,
+                                         "party_count": 0,
+                                         "buddy_count" : 0]
         
         let ref = DatabaseReference.toLocation(.showUser(uid: firUser.uid))
         ref.setValue(userAttrs) { (error, ref) in
@@ -50,6 +52,25 @@ struct UserService {
             
             let profileImage = snapshot.reversed().flatMap(ProfileImage.init)
             completion(profileImage)
+        })
+    }
+    
+    static func observeProfile(for user: User, completion: @escaping (DatabaseReference, User?, [ProfileImage]) -> Void) -> DatabaseHandle {
+        // 1
+        let userRef = Database.database().reference().child("users").child(user.uid)
+        
+        // 2
+        return userRef.observe(.value, with: { (snapshot) in
+            // 3
+            guard let user = User(snapshot: snapshot) else {
+                return completion(userRef, nil, [])
+            }
+            
+            // 4
+            profileImage(for: user, completion: { profileImage in
+                // 5
+                completion(userRef, user, profileImage)
+            })
         })
     }
 }

@@ -299,6 +299,8 @@
                         <outlet property="profImageView" destination="8oh-Yv-Kx5" id="uHe-aZ-JyB"/>
                         <outlet property="profNameLabel" destination="Zu7-vs-A3d" id="jzC-vJ-6w5"/>
                         <outlet property="profUsernameLabel" destination="MDt-rW-Okk" id="pAT-W2-05C"/>
+                        <outlet property="profileView" destination="qWv-P8-s8p" id="dPR-IE-Svn"/>
+                        <outlet property="view" destination="qWv-P8-s8p" id="EEJ-qb-dTg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewh-jc-K9A" userLabel="First Responder" sceneMemberID="firstResponder"/>

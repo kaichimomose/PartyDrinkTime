@@ -49,6 +49,7 @@ class ProfileHeaderView: UICollectionReusableView {
     }
     
     @IBAction func settingButtonTapped(_ sender: UIButton) {
+        print("button tapped")
         delegate?.didTapSettingButton(sender, on: self)
     }
     

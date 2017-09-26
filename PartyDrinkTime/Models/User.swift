@@ -15,7 +15,9 @@ class User: NSObject {
     
     let uid: String
     let username: String
-    
+    var partyCount: Int?
+    var buddyCount: Int?
+
     // MARK: - Singleton
     
     // 1
@@ -59,11 +61,16 @@ class User: NSObject {
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let username = dict["username"] as? String
+            let username = dict["username"] as? String,
+            let partyCount = dict["party_count"] as? Int,
+            let buddyCount = dict["buddy_count"] as? Int
             else { return nil }
         
         self.uid = snapshot.key
         self.username = username
+        self.partyCount = partyCount
+        self.buddyCount = buddyCount
+        
         super.init()
     }
     

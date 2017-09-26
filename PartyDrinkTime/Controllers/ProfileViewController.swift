@@ -17,9 +17,12 @@ class ProfileViewController: UIViewController{
     @IBOutlet weak var profAgeLabel: UILabel!
     @IBOutlet weak var editImageButton: UIButton!
     @IBOutlet weak var profImageView: UIImageView!
+    @IBOutlet var profileView: UIView!
     
     let photoHelper = MGPhotoHelper()
     var profileImage = [ProfileImage]()
+    
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +30,36 @@ class ProfileViewController: UIViewController{
         profImageView.layer.cornerRadius = 6
         profImageView.layer.borderColor = UIColor.lightGray.cgColor
         profImageView.layer.borderWidth = 1
+                
+//        configureView()
+        reloadProfile()
         
+    }
+    
+    func reloadProfile(){
         photoHelper.completionHandler = { image in
             ProfileImageService.create(for: image)
         }
         
         UserService.profileImage(for: User.current) { (profileImage) in
             self.profileImage = profileImage
-            let imageURL = URL(string: profileImage[0].imageURL)
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
+            let imageURL = URL(string: self.profileImage[0].imageURL)
             self.profImageView.kf.setImage(with: imageURL)
+            
+            self.profileView.reloadInputViews()
         }
     }
     
+    func configureView() {
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadProfile), for: .valueChanged)
+        profileView.addSubview(refreshControl)
+    }
     @IBAction func editImageButtonTapped(_ sender: UIButton) {
         photoHelper.presentActionSheet(from: self)
     }
