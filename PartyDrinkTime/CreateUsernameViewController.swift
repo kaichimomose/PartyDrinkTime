@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class CreateUsernameViewController: UIViewController {
+class CreateUsernameViewController: UIViewController, AlertPresentable {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
@@ -24,7 +24,7 @@ class CreateUsernameViewController: UIViewController {
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
-            !username.isEmpty else { return }
+            !username.isEmpty else { usernameAlart(); return }
         
         UserService.create(firUser, username: username) { (user) in
             guard let user = user else {
@@ -32,7 +32,7 @@ class CreateUsernameViewController: UIViewController {
                 return
             }
             
-            User.setCurrent(user, writeToUserDefaults: true)
+        User.setCurrent(user, writeToUserDefaults: true)
 
         }
     }

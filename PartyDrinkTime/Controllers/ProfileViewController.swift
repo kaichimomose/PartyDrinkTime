@@ -79,17 +79,11 @@ class ProfileViewController: UIViewController{
             }
         }
         
-        profileRef?.removeObserver(withHandle: profileHandle)
+        //profileRef?.removeObserver(withHandle: profileHandle)
         
-        let name = user.name ?? ""
+        let name = user.name ?? "no name"
         profNameTextField.text = name
-        
         profUsernameTextField.text = user.username
-        
-//        let imageURL = URL(string: self.profileImage[0].imageURL)
-//        self.profImageView.kf.setImage(with: imageURL)
-//        
-//        self.profileView.reloadInputViews()
         
         UserService.profileImage(for: User.current) { (profileImage) in
             self.profileImage = profileImage
@@ -100,14 +94,12 @@ class ProfileViewController: UIViewController{
             
             let imageURL = URL(string: self.profileImage[0].imageURL)
             self.profImageView.kf.setImage(with: imageURL)
-            
-            self.profileView.reloadInputViews()
         }
     }
     
-//    deinit {
-//        profileRef?.removeObserver(withHandle: profileHandle)
-//    }
+    deinit {
+        profileRef?.removeObserver(withHandle: profileHandle)
+    }
     
     func configureView() {
         // add pull to refresh

@@ -98,7 +98,7 @@ extension MydataViewController: UICollectionViewDataSource {
 //        let imageURL = URL(string: profileImage.imageURL)
 //        headerView.profileImageView.kf.setImage(with: imageURL)
         
-        UserService.profileImage(for: User.current) { (profileImage) in
+        UserService.profileImage(for: user) { (profileImage) in
             self.profileImages = profileImage
             let imageURL = URL(string: self.profileImages[0].imageURL)
             headerView.profileImageView.kf.setImage(with: imageURL)

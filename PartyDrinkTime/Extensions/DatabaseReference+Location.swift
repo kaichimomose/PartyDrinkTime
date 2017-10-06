@@ -16,6 +16,7 @@ extension DatabaseReference {
         case profileImage(uid: String)
         case user
         case showUser(uid: String)
+        case userName(uid: String, name: String)
         
         func asDatabaseReference() -> DatabaseReference {
             let root = Database.database().reference()
@@ -29,6 +30,8 @@ extension DatabaseReference {
                 return root.child("users")
             case .showUser(let uid):
                 return root.child("users").child(uid)
+            case .userName(let uid, let name):
+                return root.child("users").child(uid).child(name)
             }
         }
     }

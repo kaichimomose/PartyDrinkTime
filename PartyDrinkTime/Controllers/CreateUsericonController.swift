@@ -11,13 +11,14 @@ import FirebaseAuth
 import FirebaseDatabase
 import Kingfisher
 
-class CreateUsericonController: UIViewController {
+class CreateUsericonController: UIViewController, AlertPresentable {
 
     @IBOutlet weak var usericonImageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     
     let photoHelper = MGPhotoHelper()
-    var profileImage = [ProfileImage]()
+    var profileImage = [ProfileImage?]()
+    var selectImage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,25 +31,24 @@ class CreateUsericonController: UIViewController {
     
     @IBAction func selectImage(_ sender: UITapGestureRecognizer) {
         photoHelper.presentActionSheet(from: self)
-        
         photoHelper.completionHandler = { image in
             ProfileImageService.create(for: image)
+        self.selectImage += 1
         }
         
-//        UserService.profileImage(for: User.current) { (profileImage) in
-//            self.profileImage = profileImage
-//            let imageURL = URL(string: self.profileImage[0].imageURL)
-//            self.usericonImageView.kf.setImage(with: imageURL)
-//
-//        }
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-
+        
+        if self.selectImage == 0 {
+            self.usericonAlart()
+            return
+        }
+        
+        else {
             let initialViewController = UIStoryboard.initialViewController(for: .main)
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
-
+        }
     }
-    
 }
