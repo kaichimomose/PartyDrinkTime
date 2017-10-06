@@ -75,26 +75,16 @@ class ProfileViewController: UIViewController{
                     self.refreshControl.endRefreshing()
                 }
                 
+                let name = user?.name ?? "no name"
+                self.profNameTextField.text = name
+                self.profUsernameTextField.text = user?.username
+                let imageURL = URL(string: self.profileImage[0].imageURL)
+                self.profImageView.kf.setImage(with: imageURL)
+                
                 self.profileView.reloadInputViews()
             }
         }
         
-        //profileRef?.removeObserver(withHandle: profileHandle)
-        
-        let name = user.name ?? "no name"
-        profNameTextField.text = name
-        profUsernameTextField.text = user.username
-        
-        UserService.profileImage(for: User.current) { (profileImage) in
-            self.profileImage = profileImage
-            
-            if self.refreshControl.isRefreshing {
-                self.refreshControl.endRefreshing()
-            }
-            
-            let imageURL = URL(string: self.profileImage[0].imageURL)
-            self.profImageView.kf.setImage(with: imageURL)
-        }
     }
     
     deinit {

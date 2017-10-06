@@ -50,6 +50,9 @@ class MydataViewController: UIViewController {
                     self.refreshControl.endRefreshing()
                 }
                 
+                //        let imageURL = URL(string: profileImage.imageURL)
+                //        headerView.profileImageView.kf.setImage(with: imageURL)
+                
                 self.collectionView.reloadData()
             }
         }
@@ -94,17 +97,12 @@ extension MydataViewController: UICollectionViewDataSource {
         
         headerView.nameLabel.text = user.username
         
-//        let profileImage = self.profileImages[0]
-//        let imageURL = URL(string: profileImage.imageURL)
-//        headerView.profileImageView.kf.setImage(with: imageURL)
-        
         UserService.profileImage(for: user) { (profileImage) in
             self.profileImages = profileImage
             let imageURL = URL(string: self.profileImages[0].imageURL)
             headerView.profileImageView.kf.setImage(with: imageURL)
         }
 
-        
         //headerView.profileImageView.backgroundColor = .red
         
         return headerView
