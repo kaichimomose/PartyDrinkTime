@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E75B3BC42CEEBA2E1AF90F7 /* Pods_PartyDrinkTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */; };
 		BF1B98D41F8693FF000B53C4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B98D31F8693FF000B53C4 /* AlertHelper.swift */; };
+		BF1B98D81F8D18C3000B53C4 /* NameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B98D71F8D18C3000B53C4 /* NameService.swift */; };
 		BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8A971F6B91310065CEAD /* AppDelegate.swift */; };
 		BF2B8A9F1F6B91310065CEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */; };
 		BF2B8AB31F6B9CC00065CEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B8AB11F6B9CC00065CEAD /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 		2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyDrinkTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		806E2D5AA03C1EE8000A91F5 /* Pods-PartyDrinkTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyDrinkTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime.release.xcconfig"; sourceTree = "<group>"; };
 		BF1B98D31F8693FF000B53C4 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertHelper.swift; path = Helpers/AlertHelper.swift; sourceTree = "<group>"; };
+		BF1B98D71F8D18C3000B53C4 /* NameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameService.swift; path = Services/NameService.swift; sourceTree = "<group>"; };
 		BF2B8A941F6B91310065CEAD /* PartyDrinkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyDrinkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2B8A971F6B91310065CEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2B8A9E1F6B91310065CEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				BF6005881F772A5A0054AF62 /* StorageService.swift */,
 				BF60058A1F772AEB0054AF62 /* PostService.swift */,
 				BF60058E1F772DCC0054AF62 /* ProfileImageService.swift */,
+				BF1B98D71F8D18C3000B53C4 /* NameService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				BF5E0A2D1F75588B00EEF84C /* MainTabBarController.swift in Sources */,
 				BF60058B1F772AEB0054AF62 /* PostService.swift in Sources */,
 				BF45E49A1F71E7E2000D0BC0 /* UserService.swift in Sources */,
+				BF1B98D81F8D18C3000B53C4 /* NameService.swift in Sources */,
 				BF1B98D41F8693FF000B53C4 /* AlertHelper.swift in Sources */,
 				BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */,
 				BFCAB4A61F72B0BF00B27919 /* MydataViewController.swift in Sources */,

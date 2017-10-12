@@ -108,6 +108,9 @@ class ProfileViewController: UIViewController{
             } else if identifier == "done" {
                 print("Done button tapped")
                 
+                NameService.create(for: user) { (user) in
+                    self.user.name = self.profNameTextField.text!
+                }
                 // 1
                 let MydataViewController = segue.destination as! MydataViewController
                 // 2

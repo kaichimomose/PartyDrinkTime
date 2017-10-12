@@ -15,7 +15,7 @@ class User: NSObject {
     
     let uid: String
     var username: String
-    var name: String?
+    var name: String
     var partyCount: Int?
     var buddyCount: Int?
 
@@ -23,14 +23,12 @@ class User: NSObject {
     
     // 1
     private static var _current: User?
-    
     // 2
     static var current: User {
         // 3
         guard let currentUser = _current else {
             fatalError("Error: current user doesn't exist")
         }
-        
         // 4
         return currentUser
     }
@@ -57,6 +55,7 @@ class User: NSObject {
     init(uid: String, username: String) {
         self.uid = uid
         self.username = username
+        self.name = ""
         super.init()
     }
     
@@ -84,6 +83,7 @@ class User: NSObject {
         
         self.uid = uid
         self.username = username
+        self.name = ""
         
         super.init()
     }

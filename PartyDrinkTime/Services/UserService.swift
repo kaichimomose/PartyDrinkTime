@@ -25,7 +25,7 @@ struct UserService {
     
     static func create(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
         let userAttrs: [String : Any] = ["username": username,
-                                         "name": "Kaichi Momose",
+                                         "name": "",
                                          "party_count": 30,
                                          "buddy_count" : 30]
         
