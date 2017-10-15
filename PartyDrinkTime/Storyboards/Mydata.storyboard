@@ -154,6 +154,9 @@
                                                 <segment title="Future"/>
                                             </segments>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="slectSegue:" destination="p0e-7z-ziK" eventType="valueChanged" id="aEW-1f-ywh"/>
+                                            </connections>
                                         </segmentedControl>
                                     </subviews>
                                     <constraints>
@@ -176,6 +179,7 @@
                                         <outlet property="buddyCountLabel" destination="t6d-f1-EvR" id="JWf-ts-EQm"/>
                                         <outlet property="nameLabel" destination="DxU-RF-b69" id="mop-tN-iH2"/>
                                         <outlet property="partyCountLabel" destination="wA6-I1-S6e" id="vHB-DQ-yhI"/>
+                                        <outlet property="previousFutureSegue" destination="7bt-Q9-4an" id="wzs-bN-3dd"/>
                                         <outlet property="profileButton" destination="lcJ-LF-mPp" id="J7p-pf-AnE"/>
                                         <outlet property="profileImageView" destination="Owu-wU-DdE" id="Y6w-ZB-lfw"/>
                                         <outlet property="settingButton" destination="1aL-PO-KLi" id="Usx-bK-BVz"/>
@@ -198,11 +202,64 @@
                     <navigationItem key="navigationItem" title="My Party Data" id="W4Y-kR-DPv"/>
                     <connections>
                         <outlet property="collectionView" destination="Uag-Bj-gVV" id="JX8-Y4-PNR"/>
+                        <segue destination="hoL-cP-dxr" kind="show" id="0j8-A5-YzR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWy-DZ-BDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1418.840579710145" y="-271.46739130434787"/>
+        </scene>
+        <!--Future Party -->
+        <scene sceneID="gkA-EM-GNZ">
+            <objects>
+                <viewController storyboardIdentifier="FuturePartyListTableViewController" id="hoL-cP-dxr" customClass="FuturePartyListTableViewController" customModule="PartyDrinkTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dm5-eL-SFO"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZb-67-YL9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lcK-Tb-gwe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hLY-zF-tHJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="futurePartyListTableViewCell" id="JU0-zV-s8X" customClass="FuturePartyListTableViewCell" customModule="PartyDrinkTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JU0-zV-s8X" id="Yr3-ct-YZJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hoL-cP-dxr" id="7jH-nq-znc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hLY-zF-tHJ" firstAttribute="leading" secondItem="lcK-Tb-gwe" secondAttribute="leading" id="Cyg-ux-YfW"/>
+                            <constraint firstAttribute="bottom" secondItem="hLY-zF-tHJ" secondAttribute="bottom" id="c1y-wc-wbi"/>
+                            <constraint firstAttribute="trailing" secondItem="hLY-zF-tHJ" secondAttribute="trailing" id="oWt-SK-W01"/>
+                            <constraint firstItem="hLY-zF-tHJ" firstAttribute="top" secondItem="lcK-Tb-gwe" secondAttribute="top" id="xRL-Iy-pNM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Future Party " id="83d-5h-zyb">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="ZT9-9U-mxh">
+                            <connections>
+                                <segue destination="on3-tv-d6v" kind="unwind" identifier="back" unwindAction="unwindToMydataViewController:" id="O6m-jx-s5L"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h9D-Nt-AUf"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM9-nC-p2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="on3-tv-d6v" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1418" y="475"/>
         </scene>
         <!--Profile-->
         <scene sceneID="n2x-ZI-g56">

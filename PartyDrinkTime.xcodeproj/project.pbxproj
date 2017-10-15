@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E75B3BC42CEEBA2E1AF90F7 /* Pods_PartyDrinkTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */; };
+		BF0C1A761F93FAB9007A8A28 /* FuturePartyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C1A751F93FAB9007A8A28 /* FuturePartyListTableViewController.swift */; };
+		BF0C1A781F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C1A771F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift */; };
 		BF1B98D41F8693FF000B53C4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B98D31F8693FF000B53C4 /* AlertHelper.swift */; };
 		BF1B98D81F8D18C3000B53C4 /* NameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B98D71F8D18C3000B53C4 /* NameService.swift */; };
 		BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8A971F6B91310065CEAD /* AppDelegate.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyDrinkTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		806E2D5AA03C1EE8000A91F5 /* Pods-PartyDrinkTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyDrinkTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime.release.xcconfig"; sourceTree = "<group>"; };
+		BF0C1A751F93FAB9007A8A28 /* FuturePartyListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FuturePartyListTableViewController.swift; path = Controllers/FuturePartyListTableViewController.swift; sourceTree = "<group>"; };
+		BF0C1A771F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FuturePartyListTableViewCell.swift; path = Views/FuturePartyListTableViewCell.swift; sourceTree = "<group>"; };
 		BF1B98D31F8693FF000B53C4 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertHelper.swift; path = Helpers/AlertHelper.swift; sourceTree = "<group>"; };
 		BF1B98D71F8D18C3000B53C4 /* NameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameService.swift; path = Services/NameService.swift; sourceTree = "<group>"; };
 		BF2B8A941F6B91310065CEAD /* PartyDrinkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyDrinkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +138,7 @@
 				BFCAB4A51F72B0BF00B27919 /* MydataViewController.swift */,
 				BF5E0A2C1F75588B00EEF84C /* MainTabBarController.swift */,
 				BF6005831F770F140054AF62 /* ProfileViewController.swift */,
+				BF0C1A751F93FAB9007A8A28 /* FuturePartyListTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				BF6005811F75714F0054AF62 /* ProfileHeaderView.swift */,
 				BFCAB4A91F72FCD300B27919 /* PartyListTab.swift */,
 				BF5E0A2E1F755DEF00EEF84C /* PartyImageCell.swift */,
+				BF0C1A771F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -372,6 +378,8 @@
 				BF6005891F772A5A0054AF62 /* StorageService.swift in Sources */,
 				BF6005841F770F140054AF62 /* ProfileViewController.swift in Sources */,
 				BF6005911F7732AE0054AF62 /* UIImage+Size.swift in Sources */,
+				BF0C1A761F93FAB9007A8A28 /* FuturePartyListTableViewController.swift in Sources */,
+				BF0C1A781F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift in Sources */,
 				BF45E4981F71E33D000D0BC0 /* CreateUsernameViewController.swift in Sources */,
 				BF60058F1F772DCC0054AF62 /* ProfileImageService.swift in Sources */,
 				BF6005931F77333A0054AF62 /* StorageReference+ProfileImage.swift in Sources */,

@@ -11,6 +11,7 @@ import UIKit
 
 protocol ProfileHeaderViewDelegate: class {
     func didTapSettingButton(_ button: UIButton, on headerView: ProfileHeaderView)
+    func didFutureSelect()
 }
 
 class ProfileHeaderView: UICollectionReusableView {
@@ -21,6 +22,7 @@ class ProfileHeaderView: UICollectionReusableView {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var previousFutureSegue: UISegmentedControl!
     
     weak var delegate: ProfileHeaderViewDelegate?
     
@@ -49,11 +51,25 @@ class ProfileHeaderView: UICollectionReusableView {
     }
     
     @IBAction func settingButtonTapped(_ sender: UIButton) {
-        print("button tapped")
         delegate?.didTapSettingButton(sender, on: self)
     }
     
-//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @IBAction func slectSegue(_ sender: UISegmentedControl) {
+        var time = ""
+        switch previousFutureSegue.selectedSegmentIndex {
+        case 0:
+            time = "previous"
+        case 1:
+            time = "future"
+        default:
+            break
+        }
+        
+        if time == "future" {
+            delegate?.didFutureSelect()
+        }
+    }
+    //    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let identifier = segue.identifier {
 //            if identifier == "displayProfile" {
 //                print("Transitioning to the Display Profile View Controller")

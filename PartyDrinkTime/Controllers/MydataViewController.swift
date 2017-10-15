@@ -68,6 +68,16 @@ class MydataViewController: UIViewController {
         // we'll add code later
         
     }
+    
+    func goToFuturePartyListTableViewController() {
+        print("future tapped")
+        
+        let storyboard = UIStoryboard(name: "Mydata", bundle: nil)
+
+        let futurePartyController = storyboard.instantiateViewController(withIdentifier: "FuturePartyListTableViewController") as! FuturePartyListTableViewController
+        self.navigationController?.pushViewController(futurePartyController, animated: true)
+        
+    }
 }
     
 extension MydataViewController: UICollectionViewDataSource {
@@ -97,11 +107,15 @@ extension MydataViewController: UICollectionViewDataSource {
         
         headerView.nameLabel.text = user.username
         
+        headerView.previousFutureSegue.selectedSegmentIndex = 0
+        
         UserService.profileImage(for: user) { (profileImage) in
             self.profileImages = profileImage
             let imageURL = URL(string: self.profileImages[0].imageURL)
             headerView.profileImageView.kf.setImage(with: imageURL)
         }
+        
+        headerView.delegate = self
 
         //headerView.profileImageView.backgroundColor = .red
         
@@ -132,6 +146,7 @@ extension MydataViewController: UICollectionViewDelegateFlowLayout {
 
 extension MydataViewController: ProfileHeaderViewDelegate {
     func didTapSettingButton(_ button: UIButton, on headerView: ProfileHeaderView) {
+        print("button tapped")
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let signOutAction = UIAlertAction(title: "Sign Out", style: .default) { _ in
@@ -148,4 +163,10 @@ extension MydataViewController: ProfileHeaderViewDelegate {
         
         present(alertController, animated: true)
     }
+    
+    func didFutureSelect(){
+        goToFuturePartyListTableViewController()
+    }
 }
+
+
