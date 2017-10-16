@@ -225,11 +225,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="futurePartyListTableViewCell" rowHeight="100" id="JU0-zV-s8X" customClass="FuturePartyListTableViewCell" customModule="PartyDrinkTime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="futurePartyListTableViewCell" rowHeight="70" id="JU0-zV-s8X" customClass="FuturePartyListTableViewCell" customModule="PartyDrinkTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JU0-zV-s8X" id="Yr3-ct-YZJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IOP-y9-j4n">
@@ -250,7 +250,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rT-dk-iIn">
-                                                    <rect key="frame" x="317" y="35" width="50" height="30"/>
+                                                    <rect key="frame" x="317" y="20" width="50" height="30"/>
                                                     <color key="backgroundColor" red="0.99111861680288738" green="0.34503869579412294" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="dze-JI-RNO"/>
@@ -275,13 +275,13 @@
                                         <connections>
                                             <outlet property="partyDateLabel" destination="dOU-mb-n3f" id="Gg7-BB-go0"/>
                                             <outlet property="partyNameLabel" destination="wcX-Bk-Y0k" id="yNz-o6-kmh"/>
-                                            <outlet property="partyPlaceLabel" destination="dOU-mb-n3f" id="egX-qU-KLM"/>
                                             <outlet property="startButton" destination="8rT-dk-iIn" id="Dfc-lX-kCA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="hoL-cP-dxr" id="7jH-nq-znc"/>
+                                    <outlet property="delegate" destination="hoL-cP-dxr" id="3Gd-7S-2bn"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -301,15 +301,18 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h9D-Nt-AUf">
                             <connections>
-                                <segue destination="lsR-u2-EeS" kind="show" id="6QZ-US-Erd"/>
+                                <segue destination="lsR-u2-EeS" kind="show" identifier="add party" id="6QZ-US-Erd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="hLY-zF-tHJ" id="MWD-aE-Kcv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gM9-nC-p2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="on3-tv-d6v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1416.8" y="474.51274362818594"/>
+            <point key="canvasLocation" x="1415.2" y="473.6131934032984"/>
         </scene>
         <!--make a party plan-->
         <scene sceneID="hRe-Mj-Inv">

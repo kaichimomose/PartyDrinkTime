@@ -8,7 +8,11 @@
 
 import UIKit
 
-class FuturePartyListTableViewController: UIViewController {
+protocol ListDelegate: class {
+    func addLists(list: List)
+}
+
+class FuturePartyListTableViewController: UIViewController, ListDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,7 +37,7 @@ class FuturePartyListTableViewController: UIViewController {
             mydataViewController.viewDidLoad()
         } else if segue.identifier == "add party" {
             let partyPlanViewContorller = segue.destination as! PartyPlanViewController
-            partyPlanViewContorller.listCallBack = self.addLists
+            partyPlanViewContorller.delegate = self
             print("+ button tapped")
         }
     }
@@ -47,7 +51,7 @@ class FuturePartyListTableViewController: UIViewController {
 extension FuturePartyListTableViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,9 +67,7 @@ extension FuturePartyListTableViewController: UITableViewDataSource {
 
         cell.partyNameLabel.text = list.partyName
 
-        cell.partyDateLabel.text = list.partyDate
-
-//        cell.moodModificationTimeLabel.text = list.modificationTime.convertToString()
+        //cell.partyDateLabel.text = list.partyDate
         
         return cell
     }
@@ -83,6 +85,7 @@ extension FuturePartyListTableViewController: UITableViewDataSource {
 
 extension FuturePartyListTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 70
     }
 }
+

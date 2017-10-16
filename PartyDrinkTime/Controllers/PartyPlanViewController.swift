@@ -1,5 +1,5 @@
 //
-//  PartyPalnViewController.swift
+//  PartyPlanViewController.swift
 //  PartyDrinkTime
 //
 //  Created by Kaichi Momose on 2017/10/16.
@@ -17,7 +17,8 @@ class PartyPlanViewController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var partyDatePicker: UIDatePicker!
     
-    var listCallBack: ListCallBack?
+    //var listCallBack: ListCallBack?
+    var delegate: ListDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class PartyPlanViewController: UIViewController {
 //            list.partyDate = Date()
             
             if list.partyName != "" {
-                listCallBack?(list)
+                delegate?.addLists(list: list)
             }
             
             print("save button tapped")
