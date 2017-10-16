@@ -20,12 +20,11 @@ class FuturePartyListTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-//    @IBAction func unwindToListMoodViewController(_ segue: UIStoryboardSegue) {
-//
-//    }
+    @IBAction func unwindToFuturePartyListTableViewController(_ segue: UIStoryboardSegue) {
+
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "back" {
@@ -43,7 +42,7 @@ class FuturePartyListTableViewController: UIViewController {
 extension FuturePartyListTableViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return 100
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,4 +75,10 @@ extension FuturePartyListTableViewController: UITableViewDataSource {
 //            lists.remove(at: row)
 //        }
 //    }
+}
+
+extension FuturePartyListTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

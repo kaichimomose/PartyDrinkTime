@@ -9,5 +9,9 @@
 import UIKit
 
 class FuturePartyListTableViewCell: UITableViewCell {
+    @IBOutlet weak var partyNameLabel: UILabel!
+    @IBOutlet weak var partyPlaceLabel: UILabel!
+    @IBOutlet weak var partyDateLabel: UILabel!
+    @IBOutlet weak var organizerLabel: UILabel!
     
 }

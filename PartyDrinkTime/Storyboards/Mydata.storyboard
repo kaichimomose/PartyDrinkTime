@@ -209,7 +209,7 @@
             </objects>
             <point key="canvasLocation" x="1418.840579710145" y="-271.46739130434787"/>
         </scene>
-        <!--Future Party -->
+        <!--Future Party Schedule-->
         <scene sceneID="gkA-EM-GNZ">
             <objects>
                 <viewController storyboardIdentifier="FuturePartyListTableViewController" id="hoL-cP-dxr" customClass="FuturePartyListTableViewController" customModule="PartyDrinkTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -225,13 +225,63 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="futurePartyListTableViewCell" id="JU0-zV-s8X" customClass="FuturePartyListTableViewCell" customModule="PartyDrinkTime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="futurePartyListTableViewCell" rowHeight="100" id="JU0-zV-s8X" customClass="FuturePartyListTableViewCell" customModule="PartyDrinkTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JU0-zV-s8X" id="Yr3-ct-YZJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IOP-y9-j4n">
+                                                    <rect key="frame" x="8" y="8" width="179.5" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-Bk-Y0k">
+                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOU-mb-n3f">
+                                                            <rect key="frame" x="0.0" y="32" width="179.5" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AKY-5h-MxW">
+                                                    <rect key="frame" x="187.5" y="8" width="187.5" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4j-CS-Tge">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organizer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Be0-Pl-hSK">
+                                                            <rect key="frame" x="0.0" y="32" width="187.5" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="IOP-y9-j4n" secondAttribute="trailing" multiplier="2" id="4ce-am-Fae"/>
+                                                <constraint firstItem="IOP-y9-j4n" firstAttribute="leading" secondItem="Yr3-ct-YZJ" secondAttribute="leading" constant="8" id="9fX-dS-U7z"/>
+                                                <constraint firstItem="AKY-5h-MxW" firstAttribute="leading" secondItem="IOP-y9-j4n" secondAttribute="trailing" id="FsW-Z3-G2n"/>
+                                                <constraint firstItem="AKY-5h-MxW" firstAttribute="top" secondItem="IOP-y9-j4n" secondAttribute="top" id="hvX-iw-rhU"/>
+                                                <constraint firstItem="IOP-y9-j4n" firstAttribute="top" secondItem="Yr3-ct-YZJ" secondAttribute="top" constant="8" id="rx1-eK-6cL"/>
+                                                <constraint firstAttribute="trailing" secondItem="AKY-5h-MxW" secondAttribute="trailing" id="tCL-VZ-vr6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="organizerLabel" destination="Be0-Pl-hSK" id="Miz-LN-SUC"/>
+                                            <outlet property="partyDateLabel" destination="X4j-CS-Tge" id="14K-St-OCq"/>
+                                            <outlet property="partyNameLabel" destination="wcX-Bk-Y0k" id="yNz-o6-kmh"/>
+                                            <outlet property="partyPlaceLabel" destination="dOU-mb-n3f" id="egX-qU-KLM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -247,19 +297,54 @@
                             <constraint firstItem="hLY-zF-tHJ" firstAttribute="top" secondItem="lcK-Tb-gwe" secondAttribute="top" id="xRL-Iy-pNM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Future Party " id="83d-5h-zyb">
+                    <navigationItem key="navigationItem" title="Future Party Schedule" id="83d-5h-zyb">
                         <barButtonItem key="leftBarButtonItem" title="back" id="ZT9-9U-mxh">
                             <connections>
                                 <segue destination="on3-tv-d6v" kind="unwind" identifier="back" unwindAction="unwindToMydataViewController:" id="O6m-jx-s5L"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h9D-Nt-AUf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h9D-Nt-AUf">
+                            <connections>
+                                <segue destination="lsR-u2-EeS" kind="show" id="6QZ-US-Erd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gM9-nC-p2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="on3-tv-d6v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="475"/>
+            <point key="canvasLocation" x="1416.8" y="474.51274362818594"/>
+        </scene>
+        <!--make a plan-->
+        <scene sceneID="hRe-Mj-Inv">
+            <objects>
+                <viewController id="lsR-u2-EeS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2nH-My-WO2"/>
+                        <viewControllerLayoutGuide type="bottom" id="KTg-2L-KGk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BAN-qK-VRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="make a plan" id="JK2-In-Wto">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PKm-o5-bIe">
+                            <connections>
+                                <segue destination="3ez-8J-eef" kind="unwind" unwindAction="unwindToFuturePartyListTableViewController:" id="OVw-Fl-RcI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pCt-ej-8um">
+                            <connections>
+                                <segue destination="3ez-8J-eef" kind="unwind" unwindAction="unwindToFuturePartyListTableViewController:" id="idu-2D-sws"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GC-kJ-Zbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3ez-8J-eef" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="473"/>
         </scene>
         <!--Profile-->
         <scene sceneID="n2x-ZI-g56">
