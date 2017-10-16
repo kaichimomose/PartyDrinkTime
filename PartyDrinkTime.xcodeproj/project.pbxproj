@@ -34,6 +34,8 @@
 		BF6005931F77333A0054AF62 /* StorageReference+ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6005921F77333A0054AF62 /* StorageReference+ProfileImage.swift */; };
 		BF6A0A981F775C6A00E52A5F /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A0A971F775C6A00E52A5F /* DatabaseReference+Location.swift */; };
 		BF6A0A9C1F79562000E52A5F /* CreateUsericonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A0A9B1F79562000E52A5F /* CreateUsericonController.swift */; };
+		BF6AD0F61F9502A400CF5AA4 /* PartyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6AD0F51F9502A400CF5AA4 /* PartyPlanViewController.swift */; };
+		BF6AD0F81F9504AB00CF5AA4 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6AD0F71F9504AB00CF5AA4 /* List.swift */; };
 		BFC9D2291F71AAB300F32781 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9D2281F71AAB300F32781 /* User.swift */; };
 		BFCAB49D1F721F9E00B27919 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB49C1F721F9E00B27919 /* Constants.swift */; };
 		BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB4A11F723B0800B27919 /* Storyboard+Utility.swift */; };
@@ -73,6 +75,8 @@
 		BF6005921F77333A0054AF62 /* StorageReference+ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+ProfileImage.swift"; path = "Extensions/StorageReference+ProfileImage.swift"; sourceTree = "<group>"; };
 		BF6A0A971F775C6A00E52A5F /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseReference+Location.swift"; path = "Extensions/DatabaseReference+Location.swift"; sourceTree = "<group>"; };
 		BF6A0A9B1F79562000E52A5F /* CreateUsericonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateUsericonController.swift; path = Controllers/CreateUsericonController.swift; sourceTree = "<group>"; };
+		BF6AD0F51F9502A400CF5AA4 /* PartyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PartyPlanViewController.swift; path = Controllers/PartyPlanViewController.swift; sourceTree = "<group>"; };
+		BF6AD0F71F9504AB00CF5AA4 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = List.swift; path = Models/List.swift; sourceTree = "<group>"; };
 		BFC9D2281F71AAB300F32781 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		BFCAB49C1F721F9E00B27919 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		BFCAB4A11F723B0800B27919 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				BF5E0A2C1F75588B00EEF84C /* MainTabBarController.swift */,
 				BF6005831F770F140054AF62 /* ProfileViewController.swift */,
 				BF0C1A751F93FAB9007A8A28 /* FuturePartyListTableViewController.swift */,
+				BF6AD0F51F9502A400CF5AA4 /* PartyPlanViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			children = (
 				BFC9D2281F71AAB300F32781 /* User.swift */,
 				BF60058C1F772C370054AF62 /* ProfileImage.swift */,
+				BF6AD0F71F9504AB00CF5AA4 /* List.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -369,6 +375,8 @@
 				BF1B98D81F8D18C3000B53C4 /* NameService.swift in Sources */,
 				BF1B98D41F8693FF000B53C4 /* AlertHelper.swift in Sources */,
 				BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */,
+				BF6AD0F81F9504AB00CF5AA4 /* List.swift in Sources */,
+				BF6AD0F61F9502A400CF5AA4 /* PartyPlanViewController.swift in Sources */,
 				BFCAB4A61F72B0BF00B27919 /* MydataViewController.swift in Sources */,
 				BF60058D1F772C370054AF62 /* ProfileImage.swift in Sources */,
 				BFCAB4AA1F72FCD300B27919 /* PartyListTab.swift in Sources */,

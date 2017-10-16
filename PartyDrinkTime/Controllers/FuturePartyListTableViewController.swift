@@ -12,11 +12,11 @@ class FuturePartyListTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-//    var lists = [List]() {
-//        didSet {
-//            tableView.reloadData()
-//        }
-//    }
+    var lists = [List]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,17 @@ class FuturePartyListTableViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "back" {
             print("back Tapped")
-            let MydataViewController = segue.destination as! MydataViewController
-            MydataViewController.viewDidLoad()
-        } else if segue.identifier == "addMood" {
-            
+            let mydataViewController = segue.destination as! MydataViewController
+            mydataViewController.viewDidLoad()
+        } else if segue.identifier == "add party" {
+            let partyPlanViewContorller = segue.destination as! PartyPlanViewController
+            partyPlanViewContorller.listCallBack = self.addLists
             print("+ button tapped")
         }
+    }
+    
+    func addLists(list: List) {
+        lists.append(list)
     }
     
 }
@@ -46,35 +51,34 @@ extension FuturePartyListTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return lists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "futurePartyListTableViewCell", for: indexPath) as! FuturePartyListTableViewCell
         
-        //let row = indexPath.row
+        let row = indexPath.row
         
-//        let list = lists[row]
-//
-        cell.backgroundColor = .red
-//        cell.nameLabel.text = list.name
-//
-//        cell.moodLabel.text = list.mood
-//
+        let list = lists[row]
+
+        cell.partyNameLabel.text = list.partyName
+
+        cell.partyDateLabel.text = list.partyDate
+
 //        cell.moodModificationTimeLabel.text = list.modificationTime.convertToString()
         
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//
-//        if editingStyle == .delete {
-//
-//            let row = indexPath.row
-//
-//            lists.remove(at: row)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete {
+
+            let row = indexPath.row
+
+            lists.remove(at: row)
+        }
+    }
 }
 
 extension FuturePartyListTableViewController: UITableViewDelegate {
