@@ -10,6 +10,8 @@ import UIKit
 
 class DrinkCountViewController: UIViewController {
 
+    @IBOutlet weak var partyNameTextField: UITextField!
+    @IBOutlet weak var partyPlaceTextFeild: UITextField!
     @IBOutlet weak var drink1Button: UIButton!
     @IBOutlet weak var drink1CounterLabel: UILabel!
     @IBOutlet weak var drink2Button: UIButton!
@@ -23,6 +25,8 @@ class DrinkCountViewController: UIViewController {
     var drink2Count = 0
     var drink3Count = 0
     var drink4Count = 0
+    
+    var list: List?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,11 @@ class DrinkCountViewController: UIViewController {
         drink4Button.layer.cornerRadius = 6
         drink4Button.layer.borderColor = UIColor.lightGray.cgColor
         drink4Button.layer.borderWidth = 1
+        
+        if let actList = list {
+            partyNameTextField.text = actList.partyName
+            partyPlaceTextFeild.text = actList.partyPlace
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,6 +74,10 @@ class DrinkCountViewController: UIViewController {
     @IBAction func drink4ButtonTapped(_ sender: UIButton) {
         self.drink4Count += 1
         drink4CounterLabel.text = String(self.drink4Count)
+    }
+    
+    func listReceiver(list: List) {
+        self.list = list
     }
 
 }

@@ -211,10 +211,37 @@
                                     <constraint firstItem="evD-UI-ToY" firstAttribute="height" secondItem="Jdg-lv-HRf" secondAttribute="height" id="mlW-4Q-b4d"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igt-6D-tjo">
+                                <rect key="frame" x="50" y="84" width="314" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patry Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lQx-Hg-Bj2">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESu-rZ-afg">
+                                        <rect key="frame" x="150" y="0.0" width="15.333333333333343" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Party Place" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erd-nE-PKQ">
+                                        <rect key="frame" x="165.33333333333337" y="0.0" width="148.66666666666663" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ESu-rZ-afg" firstAttribute="centerX" secondItem="9AW-7M-r3Q" secondAttribute="centerX" id="4GJ-eO-3qP"/>
+                            <constraint firstItem="Igt-6D-tjo" firstAttribute="top" secondItem="Hey-oW-Kfb" secondAttribute="bottom" constant="20" id="4f8-H4-e3i"/>
+                            <constraint firstAttribute="trailing" secondItem="erd-nE-PKQ" secondAttribute="trailing" constant="50" id="86I-zQ-Kyi"/>
                             <constraint firstItem="oOc-v0-YqW" firstAttribute="centerY" secondItem="9AW-7M-r3Q" secondAttribute="centerY" id="P4r-BE-uEg"/>
+                            <constraint firstItem="lQx-Hg-Bj2" firstAttribute="leading" secondItem="9AW-7M-r3Q" secondAttribute="leading" constant="50" id="oGT-tQ-3bI"/>
                             <constraint firstItem="oOc-v0-YqW" firstAttribute="centerX" secondItem="9AW-7M-r3Q" secondAttribute="centerX" constant="6" id="zeV-pe-9MG"/>
                         </constraints>
                     </view>
@@ -228,6 +255,8 @@
                         <outlet property="drink3CounterLabel" destination="qRq-sz-Fi1" id="G55-CZ-ytB"/>
                         <outlet property="drink4Button" destination="evD-UI-ToY" id="f3c-f9-6iP"/>
                         <outlet property="drink4CounterLabel" destination="eJh-Gw-TYE" id="wl8-2W-lbd"/>
+                        <outlet property="partyNameTextField" destination="lQx-Hg-Bj2" id="pR0-S9-ZpP"/>
+                        <outlet property="partyPlaceTextFeild" destination="erd-nE-PKQ" id="dXX-zh-dRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpH-Kw-X2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
