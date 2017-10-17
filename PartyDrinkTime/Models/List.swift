@@ -10,5 +10,5 @@ import Foundation
 
 struct List {
     var partyName = ""
-    //var partyDate = ""
+    var partyDate = ""
 }

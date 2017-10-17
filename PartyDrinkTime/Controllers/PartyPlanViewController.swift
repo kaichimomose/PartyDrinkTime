@@ -19,6 +19,7 @@ class PartyPlanViewController: UIViewController {
     
     //var listCallBack: ListCallBack?
     var delegate: ListDelegate?
+    var date = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,15 @@ class PartyPlanViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func partyDateSelected(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: partyDatePicker.date)
+        date = strDate
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "save" {
             
@@ -38,7 +48,7 @@ class PartyPlanViewController: UIViewController {
             
             list.partyName = partyNameTextField.text ?? ""
             
-//            list.partyDate = Date()
+            list.partyDate = date
             
             if list.partyName != "" {
                 delegate?.addLists(list: list)

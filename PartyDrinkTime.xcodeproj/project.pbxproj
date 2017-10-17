@@ -10,6 +10,9 @@
 		5E75B3BC42CEEBA2E1AF90F7 /* Pods_PartyDrinkTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4D960B0FD0D647238EBC11 /* Pods_PartyDrinkTime.framework */; };
 		BF0C1A761F93FAB9007A8A28 /* FuturePartyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C1A751F93FAB9007A8A28 /* FuturePartyListTableViewController.swift */; };
 		BF0C1A781F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C1A771F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift */; };
+		BF142A841F957462000DE6D4 /* Party.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF142A831F957462000DE6D4 /* Party.storyboard */; };
+		BF142A861F957C14000DE6D4 /* StartPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF142A851F957C14000DE6D4 /* StartPartyViewController.swift */; };
+		BF142A881F9587C5000DE6D4 /* DrinkCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF142A871F9587C5000DE6D4 /* DrinkCountViewController.swift */; };
 		BF1B98D41F8693FF000B53C4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B98D31F8693FF000B53C4 /* AlertHelper.swift */; };
 		BF1B98D81F8D18C3000B53C4 /* NameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B98D71F8D18C3000B53C4 /* NameService.swift */; };
 		BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B8A971F6B91310065CEAD /* AppDelegate.swift */; };
@@ -49,6 +52,9 @@
 		806E2D5AA03C1EE8000A91F5 /* Pods-PartyDrinkTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyDrinkTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyDrinkTime/Pods-PartyDrinkTime.release.xcconfig"; sourceTree = "<group>"; };
 		BF0C1A751F93FAB9007A8A28 /* FuturePartyListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FuturePartyListTableViewController.swift; path = Controllers/FuturePartyListTableViewController.swift; sourceTree = "<group>"; };
 		BF0C1A771F93FBA4007A8A28 /* FuturePartyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FuturePartyListTableViewCell.swift; path = Views/FuturePartyListTableViewCell.swift; sourceTree = "<group>"; };
+		BF142A831F957462000DE6D4 /* Party.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Party.storyboard; sourceTree = "<group>"; };
+		BF142A851F957C14000DE6D4 /* StartPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartPartyViewController.swift; path = Controllers/StartPartyViewController.swift; sourceTree = "<group>"; };
+		BF142A871F9587C5000DE6D4 /* DrinkCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrinkCountViewController.swift; path = Controllers/DrinkCountViewController.swift; sourceTree = "<group>"; };
 		BF1B98D31F8693FF000B53C4 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertHelper.swift; path = Helpers/AlertHelper.swift; sourceTree = "<group>"; };
 		BF1B98D71F8D18C3000B53C4 /* NameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameService.swift; path = Services/NameService.swift; sourceTree = "<group>"; };
 		BF2B8A941F6B91310065CEAD /* PartyDrinkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyDrinkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +150,8 @@
 				BF6005831F770F140054AF62 /* ProfileViewController.swift */,
 				BF0C1A751F93FAB9007A8A28 /* FuturePartyListTableViewController.swift */,
 				BF6AD0F51F9502A400CF5AA4 /* PartyPlanViewController.swift */,
+				BF142A851F957C14000DE6D4 /* StartPartyViewController.swift */,
+				BF142A871F9587C5000DE6D4 /* DrinkCountViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2B8AB21F6B9CC00065CEAD /* Main.storyboard */,
+				BF142A831F957462000DE6D4 /* Party.storyboard */,
 				BFCAB4A71F72F09200B27919 /* Mydata.storyboard */,
 				BF2B8ABC1F6BAAC70065CEAD /* Login.storyboard */,
 			);
@@ -304,6 +313,7 @@
 			files = (
 				BF2B8AB41F6B9CC00065CEAD /* Main.storyboard in Resources */,
 				BF2B8AB71F6B9CCD0065CEAD /* GoogleService-Info.plist in Resources */,
+				BF142A841F957462000DE6D4 /* Party.storyboard in Resources */,
 				BFCAB4A81F72F09200B27919 /* Mydata.storyboard in Resources */,
 				BF2B8A9F1F6B91310065CEAD /* Assets.xcassets in Resources */,
 				BF2B8ABD1F6BAAC70065CEAD /* Login.storyboard in Resources */,
@@ -377,6 +387,7 @@
 				BFCAB4A21F723B0800B27919 /* Storyboard+Utility.swift in Sources */,
 				BF6AD0F81F9504AB00CF5AA4 /* List.swift in Sources */,
 				BF6AD0F61F9502A400CF5AA4 /* PartyPlanViewController.swift in Sources */,
+				BF142A861F957C14000DE6D4 /* StartPartyViewController.swift in Sources */,
 				BFCAB4A61F72B0BF00B27919 /* MydataViewController.swift in Sources */,
 				BF60058D1F772C370054AF62 /* ProfileImage.swift in Sources */,
 				BFCAB4AA1F72FCD300B27919 /* PartyListTab.swift in Sources */,
@@ -392,6 +403,7 @@
 				BF60058F1F772DCC0054AF62 /* ProfileImageService.swift in Sources */,
 				BF6005931F77333A0054AF62 /* StorageReference+ProfileImage.swift in Sources */,
 				BF6005861F771B8B0054AF62 /* MGPhotoHelper.swift in Sources */,
+				BF142A881F9587C5000DE6D4 /* DrinkCountViewController.swift in Sources */,
 				BF2B8A981F6B91310065CEAD /* AppDelegate.swift in Sources */,
 				BF6A0A9C1F79562000E52A5F /* CreateUsericonController.swift in Sources */,
 			);

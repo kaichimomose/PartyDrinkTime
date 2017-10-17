@@ -67,7 +67,7 @@ extension FuturePartyListTableViewController: UITableViewDataSource {
 
         cell.partyNameLabel.text = list.partyName
 
-        //cell.partyDateLabel.text = list.partyDate
+        cell.partyDateLabel.text = list.partyDate
         
         return cell
     }

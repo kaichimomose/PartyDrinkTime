@@ -237,7 +237,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-Bk-Y0k">
                                                             <rect key="frame" x="0.0" y="0.0" width="179.5" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -394,6 +394,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="529855843.01543897">
                                                     <!--2017-10-16 14:10:43 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="partyDateSelected:" destination="lsR-u2-EeS" eventType="valueChanged" id="3ZF-85-ERL"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
