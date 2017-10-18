@@ -52,5 +52,24 @@ extension AlertPresentable where Self: UIViewController {
         
         self.present(alertVC, animated: true, completion: nil)
     }
+    
+    func startPartyAlart() {
+        let alertVC = UIAlertController(
+            title: "Error",
+            message: "Please add party name",
+            preferredStyle: .alert
+        )
+        
+        alertVC.addAction(
+            UIAlertAction(
+                title: "Ok",
+                style: .default,
+                handler: { (action) in
+                    
+            })
+        )
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
 }
 

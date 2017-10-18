@@ -8,24 +8,36 @@
 
 import UIKit
 
-typealias ListSender = (List) -> Void
-
-class StartPartyViewController: UIViewController {
+class StartPartyViewController: UIViewController, AlertPresentable {
     
     @IBOutlet weak var partyNameTextField: UITextField!
     @IBOutlet weak var partyPlaceTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
 
     var list = List()
-    var listSender: ListSender?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startParty" {
+            let drinkCountViewController = segue.destination as! DrinkCountViewController
+            
+            list.partyName = partyNameTextField.text ?? ""
+            
+            if list.partyName == ""{
+                self.startPartyAlart()
+            }
+            
+            list.partyPlace = partyPlaceTextField.text ?? ""
+            
+            drinkCountViewController.list = self.list
+        }
+    }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         print("button tapped")
         
-        list.partyName = partyNameTextField.text ?? ""
-        list.partyPlace = partyPlaceTextField.text ?? ""
+//        list.partyName = partyNameTextField.text ?? ""
+//        list.partyPlace = partyPlaceTextField.text ?? ""
         
-        listSender?(list)
     }
     
     override func viewDidLoad() {

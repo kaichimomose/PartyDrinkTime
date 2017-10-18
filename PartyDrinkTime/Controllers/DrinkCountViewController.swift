@@ -75,9 +75,5 @@ class DrinkCountViewController: UIViewController {
         self.drink4Count += 1
         drink4CounterLabel.text = String(self.drink4Count)
     }
-    
-    func listReceiver(list: List) {
-        self.list = list
-    }
 
 }
